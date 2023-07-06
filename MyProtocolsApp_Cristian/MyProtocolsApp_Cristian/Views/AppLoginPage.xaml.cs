@@ -29,5 +29,12 @@ namespace MyProtocolsApp_Cristian.Views
                 TxtPassword.IsPassword = true;
             }
         }
+
+       
+
+        private async void BtnLogin_Clicked_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Startpage());
+        }
     }
 }

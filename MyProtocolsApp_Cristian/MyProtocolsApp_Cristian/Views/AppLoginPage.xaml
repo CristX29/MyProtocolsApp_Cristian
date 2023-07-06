@@ -5,7 +5,7 @@
              Shell.NavBarIsVisible="False" 
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="LightGray"
-             BackgroundImageSource="MicrosoftTeams-image.png">  
+             BackgroundImageSource="OIP.png">  
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Padding="50, 25, 50, 25">
             
@@ -14,7 +14,7 @@
 
             <Switch x:Name="SwShowPassword" IsToggled="False" Toggled="SwShowPassword_Toggled"/>
 
-            <Button x:Name="BtnLogin" Text="LOGIN" Background="Green" CornerRadius="15"/>
+            <Button x:Name="BtnLogin" Text="LOGIN" Background="Green" CornerRadius="15" Clicked="BtnLogin_Clicked_1" />
             <Button x:Name="BtnSignUp" Text="Sign Up" Background="Blue" CornerRadius="15" />
 
             <Label x:Name="LblPasswordRecovery" Text="Password Recovery..."  />
