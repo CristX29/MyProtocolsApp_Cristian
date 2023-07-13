@@ -12,8 +12,8 @@ namespace MyProtocolsApp_Cristian.Services
         //donde el prefijo será la parte del URL que nunca cambiara y el sufijo la parte variable
         //(nombre del controlador y sus parametros)
 
-        public static string ProductionPrefixURL = "http://192.168.0.8:45455/api/";
-        public static string TestingPrefixURL = "http://192.168.0.8:45455/api/";
+        public static string ProductionPrefixURL = "http://192.168.0.2:45455/api/";
+        public static string TestingPrefixURL = "http://192.168.0.2:45455/api/";
 
     
 

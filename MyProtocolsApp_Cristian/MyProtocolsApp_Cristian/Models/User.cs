@@ -49,7 +49,7 @@ namespace MyProtocolsApp_Cristian.Models
                 //services\APIConnection para agregar el sufijo y lograr la ruta
                 //completa de consumo en el end point
 
-                string RouteSufix = string.Format("Users/ValidateLogin?username=¨{0}&password={1}", this.Email, this.Password);
+                string RouteSufix = string.Format("Users/ValidateLogin?username={0}&password={1}", this.Email, this.Password);
 
                 //armamos la ruta completa al endpoint en el API
                 string URL = Services.APIConnection.ProductionPrefixURL + RouteSufix;
