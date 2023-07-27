@@ -15,6 +15,12 @@ namespace MyProtocolsApp_Cristian.Views
         public Startpage()
         {
             InitializeComponent();
+            LoadUsername();
+
+        }
+        private void LoadUsername()
+        {
+            LblUserName.Text = GlobalObjects.MyLocalUser.Nombre;
         }
     }
 }

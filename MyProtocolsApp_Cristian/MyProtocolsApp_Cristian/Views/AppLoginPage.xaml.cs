@@ -70,7 +70,7 @@ namespace MyProtocolsApp_Cristian.Views
                         //si la validacion es correcta se permite el ingreso al systema
                         //igual que en progra 5 vamos a tener un usuario global
 
-                        //TODO: crear el objeto de usuario global
+                        GlobalObjects.MyLocalUser = await viewModel.GetUserDataAsync(TxtUserName.Text.Trim());
 
                         await Navigation.PushAsync(new Startpage());
                         return;

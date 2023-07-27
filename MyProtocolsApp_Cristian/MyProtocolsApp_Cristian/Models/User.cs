@@ -34,7 +34,8 @@ namespace MyProtocolsApp_Cristian.Models
         public virtual UserRole UserRole { get; set; }
 
         public User() { 
-        
+            Active = true;
+            IsBlocked = false;
         
         }
 
@@ -87,6 +88,64 @@ namespace MyProtocolsApp_Cristian.Models
         }
 
 
+        public async Task<bool> AddUserAsync()
+        {
+            try
+            {
+                
+
+                string RouteSufix = string.Format("Users");
+
+                //armamos la ruta completa al endpoint en el API
+                string URL = Services.APIConnection.ProductionPrefixURL + RouteSufix;
+
+                RestClient client = new RestClient(URL);
+
+                Request = new RestRequest(URL, Method.Post);
+
+                //mecanismo de seguridad en este caso API Key
+
+                Request.AddHeader(Services.APIConnection.ApiKeyName, Services.APIConnection.ApiKeyValue);
+
+                Request.AddHeader(GlobalObjects.ContentType, GlobalObjects.MimeType);
+
+                //EN EL CASO DE UNA OPERACION POST DEBEMOS serializar el objeto para pasarlo
+                //como Json al API
+
+                string SerializedModelObject = JsonConvert.SerializeObject(this);
+                //agregamos el objeto serializado en el cuerpo del request
+                Request.AddBody(SerializedModelObject, GlobalObjects.MimeType);
+
+
+
+
+
+
+                //ejecutar la llamada al API
+                RestResponse response = await client.ExecuteAsync(Request);
+
+                //saber si las cosas salieron bien
+
+                HttpStatusCode statusCode = response.StatusCode;
+
+                if (statusCode == HttpStatusCode.Created)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
+
+        }
 
 
 
