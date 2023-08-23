@@ -20,7 +20,19 @@ namespace MyProtocolsApp_Cristian.Views
         }
         private void LoadUsername()
         {
-            LblUserName.Text = GlobalObjects.MyLocalUser.Nombre;
+            LblUserName.Text = GlobalObjects.MyLocalUser.Nombre.ToUpper();
+        }
+
+        private async void BtnUserManagement_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserManagementPage());
+        }
+
+        private async void BtnProtocolManagement_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProtocolsListPage());
+
+
         }
     }
 }

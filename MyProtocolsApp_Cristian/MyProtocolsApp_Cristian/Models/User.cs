@@ -31,7 +31,7 @@ namespace MyProtocolsApp_Cristian.Models
         public bool? IsBlocked { get; set; }
         public int UserRoleId { get; set; }
 
-        public virtual UserRole UserRole { get; set; }
+        public virtual UserRole? UserRole { get; set; } = null!;
 
         public User() { 
             Active = true;

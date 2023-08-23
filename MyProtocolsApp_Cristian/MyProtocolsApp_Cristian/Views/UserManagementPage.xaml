@@ -1,39 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyProtocolsApp_Cristian.Views.UserSignUpPage">
+             x:Class="MyProtocolsApp_Cristian.Views.UserManagementPage">
     <ContentPage.Content>
-        <StackLayout Padding="20" BackgroundColor="LightGoldenrodYellow">
+        
+        <StackLayout Padding="20">
 
+            <Entry x:Name="TxtID" IsEnabled="False" VerticalTextAlignment="Center" />
 
-            <Entry x:Name="TxtEmail" Placeholder="Username / Email" Keyboard="Email" ClearButtonVisibility="WhileEditing" >
-                <Entry.Triggers>
-                
-                        <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
-                            <Setter Property="BackgroundColor" Value="LightYellow" />
-                        <Setter Property="TextColor" Value="Black" />
-                            <Setter Property="FontSize" Value="20" />
-                            <Setter Property="FontAttributes" Value="Bold" />
-                        </Trigger>
-                    
-
-                </Entry.Triggers>
-
+            <Entry x:Name="TxtEmail" IsEnabled="False" Placeholder="Username / Email" Keyboard="Email" ClearButtonVisibility="WhileEditing" >
             </Entry>
 
-            <Entry x:Name="TxtPassword" Placeholder="Password" Keyboard="Plain" ClearButtonVisibility="WhileEditing">
-            <Entry.Triggers>
-
-                <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
-                    <Setter Property="BackgroundColor" Value="LightYellow" />
-                    <Setter Property="TextColor" Value="Black" />
-                    <Setter Property="FontSize" Value="20" />
-                    <Setter Property="FontAttributes" Value="Bold" />
-                </Trigger>
-
-
-            </Entry.Triggers>
-            </Entry>
 
             <Entry x:Name="TxtName" Placeholder="Name" Keyboard="Text" ClearButtonVisibility="WhileEditing">
                 <Entry.Triggers>
@@ -83,8 +60,8 @@
 
 
             </Entry>
-    
-    
+
+
             <Editor x:Name="TxtAddress" Placeholder="Address" Keyboard="Default">
                 <Editor.Triggers>
 
@@ -101,16 +78,16 @@
 
             </Editor>
 
-                <!--en este ejemplo se permite seleccionar el rol (incluido el de admin) con fines didacticos
+            <!--en este ejemplo se permite seleccionar el rol (incluido el de admin) con fines didacticos
             en la practica el usuario no deberia poder seleccionar el rol-->
-            <Picker x:Name="PkrUserRole" Title="Select User Role" ItemDisplayBinding="{Binding Description}" >
-            </Picker>
+            
 
             <StackLayout >
-                <Button x:Name="BtnAdd" Text="Apply" CornerRadius="15" BackgroundColor="Green" Clicked="BtnAdd_Clicked"/>
-                <Button x:Name="BtnCancel" Text="Cancel" CornerRadius="15" BackgroundColor="Red" TextColor="white" Clicked="BtnCancel_Clicked"/>
+                <Button x:Name="BtnAdd" Text="Apply" CornerRadius="15" BackgroundColor="Green" Clicked="BtnUpdate_Clicked"/>
+                <Button x:Name="BtnCancel" Text="Cancel" CornerRadius="15" BackgroundColor="Red" TextColor="white" Clicked="BtnCancelar_Clicked"/>
+                
+                
             </StackLayout>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -9,8 +9,8 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Padding="50, 25, 50, 25">
             
-            <Entry x:Name="TxtUserName" Placeholder="Email" FontSize =" 30" TextColor="White" Keyboard="Email"/>
-            <Entry x:Name="TxtPassword" Placeholder="Password" FontSize="30" TextColor="White" Keyboard="Default" IsPassword = "True"/>
+            <Entry x:Name="TxtUserName" Placeholder="Email" FontSize =" 20" TextColor="Crimson" Keyboard="Email"/>
+            <Entry x:Name="TxtPassword" Placeholder="Password" FontSize="20" TextColor="Crimson" Keyboard="Default" IsPassword = "True"/>
 
             <Switch x:Name="SwShowPassword" IsToggled="False" Toggled="SwShowPassword_Toggled"/>
 

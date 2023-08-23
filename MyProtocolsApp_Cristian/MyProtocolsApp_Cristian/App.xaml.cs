@@ -13,7 +13,7 @@ namespace MyProtocolsApp_Cristian
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            //DependencyService.Register<MockDataStore>();
             //definimos la forma de apilar páginas en la pantalla
             //y cual es la primera pagina que mostraremos
 
